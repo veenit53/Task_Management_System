@@ -38,7 +38,7 @@ const UserLogin = () => {
         setUser(data.user)
 
         // redirect
-        navigate('/dashboard')
+        navigate('/home')
       }
 
     } catch (err) {
