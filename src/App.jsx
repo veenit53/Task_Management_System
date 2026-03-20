@@ -13,9 +13,7 @@ const App = () =>{
                 <Route path="/signup" element = {<UserSignup />} />
 
                 <Route path="/home" element={
-                    <UserProtectedWrapper>
                         <Home />
-                    </UserProtectedWrapper>
                 } />
             </Routes>
         </div>
