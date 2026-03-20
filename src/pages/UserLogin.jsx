@@ -20,7 +20,7 @@ const UserLogin = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/login`,
+        `${import.meta.env.VITE_BASE_URL}/users/login`,
         { email, password },
         {
           withCredentials: true
@@ -38,7 +38,7 @@ const UserLogin = () => {
         setUser(data.user)
 
         // redirect
-        navigate('/home')
+        navigate('/')
       }
 
     } catch (err) {

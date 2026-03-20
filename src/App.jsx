@@ -2,7 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.jsx'
 import UserLogin from './pages/UserLogin.jsx';
 import UserSignup from './pages/UserSignup.jsx';
-import UserProtectedWrapper from './pages/UserProtectedWrapper.jsx';
+import CreateTask from './pages/CreateTask.jsx';
+import TaskDetails from './pages/TaskDetail.jsx';
 
 
 const App = () =>{
@@ -11,9 +12,12 @@ const App = () =>{
             <Routes>
                 <Route path="/login" element = {<UserLogin />} />
                 <Route path="/signup" element = {<UserSignup />} />
-
-                <Route path="/home" element={
-                        <Home />
+                <Route path="/create-task" element={<CreateTask />} />
+                <Route path="/task/:id" element={
+                    <TaskDetails />
+                } />
+                <Route path="/" element={
+                    <Home />
                 } />
             </Routes>
         </div>

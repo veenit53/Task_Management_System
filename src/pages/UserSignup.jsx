@@ -33,7 +33,7 @@ const UserSignup = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/signup`,
+        `${import.meta.env.VITE_BASE_URL}/users/signup`,
         {
           fullname: {
             firstname: formData.firstName,
@@ -58,7 +58,7 @@ const UserSignup = () => {
         setUser(data.user)
 
         // redirect
-        navigate('/dashboard')
+        navigate('/')
       }
 
     } catch (err) {

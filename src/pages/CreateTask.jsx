@@ -15,7 +15,7 @@ const CreateTask = () => {
       await axios.post(`${import.meta.env.VITE_BASE_URL}/tasks`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      navigate("/home");
+      navigate("/");
     } catch {
       alert("Something went wrong");
     } finally {
